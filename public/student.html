@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb"><title>Course Registration System | Student Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/student.css"><link rel="stylesheet" href="/branding.css"><script src="/student.js" defer></script>
+</head>
+<body>
+  <header class="portal-header"><a class="brand" href="/" aria-label="Course Registration System home"><span class="brand-mark">◇</span><span>Course Registration<br><span class="brand-light">System</span></span></a><a class="admin-link" href="/">Admin dashboard <span>↗</span></a></header>
+  <main>
+    <section class="login-shell" id="login-view">
+      <div class="login-art"><div class="art-grid"></div><div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div><div class="art-star">✳</div><div class="art-copy"><span class="art-kicker">YOUR NEXT CHAPTER</span><h1>Learning starts<br>with a single step.</h1><p>One place for your courses, your progress, and what comes next.</p></div><div class="art-note"><span>✦</span><div><strong>Your semester, in sync.</strong><small>Pick up right where you left off.</small></div></div></div>
+      <div class="login-card"><span class="mini-brand">STUDENT PORTAL</span><h2>Welcome back</h2><p class="login-subtitle">Sign in with your student ID to continue.</p><form id="login-form"><label for="student-code">Student ID</label><div class="input-wrap"><span>♙</span><input id="student-code" name="studentCode" autocomplete="username" placeholder="e.g. S101" required></div><label for="student-password">Password</label><div class="input-wrap"><span>⌑</span><input id="student-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required><button class="show-password" type="button" id="toggle-password">Show</button></div><div class="login-error" id="login-error" role="alert"></div><button class="sign-in-button" id="sign-in-button" type="submit">Sign in <span>→</span></button></form><p class="demo-hint">Demo access: use a sample student ID and the password shown in the project README.</p><a class="back-link" href="/">← Back to course dashboard</a></div>
+    </section>
+    <section class="portal-view" id="portal-view" hidden>
+      <div class="portal-welcome"><div><div class="eyebrow">YOUR LEARNING SPACE</div><h1>Welcome back, <span id="student-name">student</span> <span class="wave">✦</span></h1><p>Here’s your course lineup. Make this semester yours.</p></div><div class="student-chip"><div class="student-avatar" id="student-avatar">S</div><div><strong id="student-code-label">Student</strong><small id="student-email"></small></div></div></div>
+      <div class="student-stats"><article><span class="stat-icon purple">▤</span><div><strong id="my-course-count">0</strong><small>My courses</small></div></article><article><span class="stat-icon green">◎</span><div><strong id="available-course-count">0</strong><small>Courses to explore</small></div></article><article><span class="stat-icon amber">✦</span><div><strong>Ready</strong><small>For your next step</small></div></article></div>
+      <section class="course-section"><div class="section-title"><div><span class="eyebrow">YOUR CURRENT SCHEDULE</span><h2>My courses</h2><p>Courses you’re enrolled in this semester.</p></div><button class="soft-button" id="portal-refresh">↻ Refresh</button></div><div class="student-course-grid" id="my-courses"></div></section>
+      <section class="course-section explore-section"><div class="section-title"><div><span class="eyebrow">FIND YOUR NEXT CLASS</span><h2>Explore courses</h2><p>There’s always something new to learn.</p></div><label class="search-box"><span>⌕</span><input id="course-search" type="search" placeholder="Search courses"></label></div><div class="student-course-grid" id="explore-courses"></div></section>
+      <footer class="portal-footer"><span>Course Registration System <b>·</b> Your academic journey, organized.</span><button id="logout-button">Sign out ↗</button></footer>
+    </section>
+  </main>
+  <div class="toast" id="portal-toast" role="status"></div>
+</body>
+</html>

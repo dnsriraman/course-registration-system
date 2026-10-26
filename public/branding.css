@@ -1,0 +1,11 @@
+.sidebar > .brand,
+.portal-header > .brand {
+  font-size: 15px;
+  line-height: 1.18;
+  letter-spacing: -0.45px;
+}
+
+.sidebar > .brand .brand-mark,
+.portal-header > .brand .brand-mark {
+  flex: 0 0 34px;
+}
